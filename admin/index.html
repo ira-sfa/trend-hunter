@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#211934" />
+    <meta
+      name="description"
+      content="Executive demo dashboard for the Winter FancyFaire* Trend Hunter game concept."
+    />
+    <title>Trend Hunter | Executive Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <header class="dashboard-header">
+        <a class="dash-brand" href="../index.html" aria-label="Winter FancyFaire* Trend Hunter home">
+          <span class="brand-star" aria-hidden="true">✳</span>
+          <span>
+            <strong>Winter FancyFaire<span class="brand-asterisk">*</span></strong>
+            <small>TREND HUNTER · EXECUTIVE DEMO</small>
+          </span>
+        </a>
+        <div class="header-right">
+          <span class="demo-badge"><i aria-hidden="true"></i>CONCEPT PREVIEW · SAMPLE CONTENT</span>
+          <a href="../index.html">Open playable game <span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <section class="dashboard-hero" aria-labelledby="dashboard-title">
+          <div class="hero-copy">
+            <p class="eyebrow">A WINTER FANCYFAIRE* EXPERIENCE</p>
+            <h1 id="dashboard-title">The trends are out.<br /><em>The hunt is on.</em></h1>
+            <p class="hero-description">
+              A quick, visual specialty food game that turns the 2027 Trend of the Year into a
+              playful show-floor experience attendees can jump into and share.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="../index.html">Play the prototype <span aria-hidden="true">→</span></a>
+              <a class="button button-quiet" href="#content-preview">Explore the experience <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="hero-note"><span aria-hidden="true">✦</span> Five fast challenges. One very fun title to earn.</p>
+          </div>
+          <div class="hero-art">
+            <div class="art-orbit orbit-one" aria-hidden="true"></div>
+            <div class="art-orbit orbit-two" aria-hidden="true"></div>
+            <span class="art-sticker">CAN YOU SPOT<br />WHAT'S NEXT?</span>
+            <img src="../assets/images/reti.png" alt="Reti waving in the Winter FancyFaire* header artwork" />
+          </div>
+        </section>
+
+        <aside class="demo-notice" role="note">
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <p>
+            <strong>Demo only — not a live analytics dashboard.</strong>
+            The figures below describe the current prototype setup. Trend names, products and
+            answer choices are placeholders; no attendee activity is collected or reported here.
+          </p>
+        </aside>
+
+        <section aria-labelledby="snapshot-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE GAME AT A GLANCE</p>
+              <h2 id="snapshot-title">Small session. Big discovery.</h2>
+            </div>
+            <span class="section-aside">Prototype configuration</span>
+          </div>
+          <div class="kpi-grid">
+            <article class="kpi-card">
+              <span class="kpi-label">CHALLENGES PER PLAY</span>
+              <strong class="kpi-value">5</strong>
+              <small>Short by design</small>
+            </article>
+            <article class="kpi-card">
+              <span class="kpi-label">SAMPLE CHALLENGES</span>
+              <strong class="kpi-value" id="challenge-count">—</strong>
+              <small>Randomized from a larger pool</small>
+            </article>
+            <article class="kpi-card">
+              <span class="kpi-label">CHALLENGE FORMATS</span>
+              <strong class="kpi-value" id="format-count">—</strong>
+              <small>Different ways to play</small>
+            </article>
+            <article class="kpi-card">
+              <span class="kpi-label">HUNTER PERSONAS</span>
+              <strong class="kpi-value" id="persona-count">—</strong>
+              <small>Shareable end-of-game result</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="dashboard-grid" id="content-preview" aria-label="Game experience and sample content">
+          <article class="panel preview-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">TAKE A QUICK LOOK</p>
+                <h2>Inside a challenge</h2>
+                <p>Cycle through examples from the current placeholder content.</p>
+              </div>
+              <span class="panel-glyph" aria-hidden="true">✳</span>
+            </div>
+            <div id="challenge-preview" class="challenge-preview" aria-live="polite">
+              <p class="preview-loading">Loading sample challenge…</p>
+            </div>
+            <div class="preview-controls">
+              <span id="preview-position" class="preview-position">Example 1</span>
+              <button id="next-example" class="button button-small" type="button">Next example <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <article class="panel formats-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">A MIX OF QUICK DECISIONS</p>
+                <h2>Challenge formats</h2>
+                <p>Different play styles keep the hunt moving.</p>
+              </div>
+            </div>
+            <div id="format-list" class="format-list"></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid lower-grid" aria-label="Result design and content readiness">
+          <article class="panel persona-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">A LITTLE BRAGGING RIGHT</p>
+                <h2>Everyone gets a title</h2>
+                <p>Scores resolve to a playful persona, not a professional assessment.</p>
+              </div>
+              <span class="panel-glyph" aria-hidden="true">✦</span>
+            </div>
+            <div id="persona-list" class="persona-list"></div>
+          </article>
+
+          <article class="panel readiness-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">READY FOR THE OFFICIAL REVEAL</p>
+                <h2>Built to swap in the real trends</h2>
+                <p>Trend-specific content is kept separate from game logic.</p>
+              </div>
+            </div>
+            <ul class="readiness-list">
+              <li><span class="readiness-mark">01</span><span><strong>Replace the placeholders</strong><small>Update trend names, product stories, questions and answers in <code>data.js</code>.</small></span></li>
+              <li><span class="readiness-mark">02</span><span><strong>Review the final challenge</strong><small>Connect the closing decision to the official Trend of the Year.</small></span></li>
+              <li><span class="readiness-mark">03</span><span><strong>Choose what comes next</strong><small>Production analytics, campaign assets and event deployment can be scoped if approved.</small></span></li>
+            </ul>
+            <div class="data-note"><strong>Today:</strong> static prototype · no backend · no attendee data collection.</div>
+          </article>
+        </section>
+
+        <footer class="dashboard-footer">
+          <span>WINTER FANCYFAIRE* · WHERE FIRSTS ARE FOUND</span>
+          <a href="../index.html">Return to the playable prototype <span aria-hidden="true">↗</span></a>
+        </footer>
+      </main>
+    </div>
+    <script src="../data.js"></script>
+    <script src="./dashboard.js"></script>
+  </body>
+</html>

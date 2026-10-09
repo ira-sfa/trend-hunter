@@ -15,6 +15,15 @@ This static website is designed to be easy to maintain and easy to host on GitHu
 - `assets/images/reti.png` – placeholder header image for Reti
 - `assets/branding/` – useful for branded art or future updates
 - `assets/products/` – useful for product artwork or custom cards
+- `admin/index.html` – executive-facing demo dashboard and sample challenge explorer
+- `admin/dashboard.css` / `admin/dashboard.js` – presentation styling and data-driven demo behavior
+
+## Executive demo
+
+After deployment, open `/admin/` for the executive demo dashboard. It summarizes the prototype's
+game flow, lets you cycle through sample challenges, and previews the score personas. It is a
+presentation page only—not a secure admin portal or analytics dashboard. It reports no attendee
+activity and collects no data.
 
 ## Local preview
 
