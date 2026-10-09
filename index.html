@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Winter FancyFaire* Trend Hunter is a playful mobile-first game where players test their instincts for emerging specialty food trends."
+    />
+    <title>Winter FancyFaire* Trend Hunter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup" aria-label="Winter FancyFaire Trend Hunter home">
+          <span class="brand-kicker">Winter FancyFaire*</span>
+          <span class="brand-title">Trend Hunter</span>
+        </div>
+      </header>
+
+      <main id="app" aria-live="polite">
+        <section id="start-screen" class="screen active" aria-labelledby="start-title">
+          <div class="hero-card">
+            <img class="reti-hero" src="./assets/images/reti.png" alt="Placeholder Reti illustration" />
+            <div class="hero-copy">
+              <p class="eyebrow">THE 2027 TRENDS ARE HERE.</p>
+              <p class="launch-banner">THE HUNT IS ON.</p>
+              <h1 id="start-title">WINTER FANCYFAIRE* <span>Trend Hunter</span></h1>
+              <p class="tagline">Can you spot what's next?</p>
+              <p class="subhead">You know what's coming. Now prove you can spot what's next.</p>
+              <div class="cta-row">
+                <button id="start-game-btn" class="primary-button" type="button">START THE HUNT</button>
+                <button id="how-to-play-btn" class="secondary-button" type="button">HOW TO PLAY</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="instructions-screen" class="screen" aria-labelledby="instructions-title">
+          <div class="instruction-card">
+            <button id="close-instructions-btn" class="close-button" type="button" aria-label="Close how to play">×</button>
+            <p class="eyebrow">HOW TO PLAY</p>
+            <h2 id="instructions-title">5 challenges. Make your picks. Trust your instincts. Earn your Trend Hunter title.</h2>
+            <ul>
+              <li>Spot the strongest trend match</li>
+              <li>Act like a buyer</li>
+              <li>Read the category with product IQ</li>
+              <li>Lock in the final call</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="game-screen" class="screen" aria-live="polite">
+          <div class="status-row">
+            <div class="status-pill">Challenge <span id="challenge-number">1</span>/5</div>
+            <div class="status-pill score-pill">Trend Instinct <span id="score-value">0</span></div>
+          </div>
+          <div id="challenge-card" class="challenge-card"></div>
+        </section>
+
+        <section id="result-screen" class="screen" aria-labelledby="result-title">
+          <div class="result-card" aria-live="polite">
+            <p class="result-label">TREND HUNTER</p>
+            <h2 id="result-title">YOUR TREND INSTINCT</h2>
+            <div id="final-score" class="final-score">0</div>
+            <div class="persona-wrap">
+              <h3 id="persona-name">THE TASTEMAKER</h3>
+              <p id="persona-blurb">You don't follow specialty food trends. You find them.</p>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric-item">
+                <span>Trend Spotting</span>
+                <strong id="metric-trend">0</strong>
+              </div>
+              <div class="metric-item">
+                <span>Buyer Instinct</span>
+                <strong id="metric-buyer">0</strong>
+              </div>
+              <div class="metric-item">
+                <span>Product IQ</span>
+                <strong id="metric-product">0</strong>
+              </div>
+            </div>
+
+            <p class="winter-branding">Winter FancyFaire*</p>
+
+            <div class="result-actions">
+              <button id="play-again-btn" class="primary-button" type="button">PLAY AGAIN</button>
+              <button id="share-result-btn" class="secondary-button" type="button">SHARE MY RESULT</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
